@@ -11,5 +11,16 @@ function getHumanChoice() {
     console.log(input);
 };
 
+getComputerChoice();
+getHumanChoice();
+
 let humanScore = 0;
 let computerScore = 0;
+
+function playRound(humanChoice, computerChoice) {
+    humanChoice = humanChoice.charAt(1).toUpperCase().slice(1).toLowerCase();
+
+    console.log()
+
+
+};
