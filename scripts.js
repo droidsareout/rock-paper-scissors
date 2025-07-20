@@ -6,4 +6,8 @@ function getComputerChoice() {
     else console.log("Scissors");
 };
 
-getComputerChoice();
+function getHumanChoice() {
+    const input = prompt("Rock, paper, or scissors?");
+    console.log(input);
+};
+getHumanChoice();
