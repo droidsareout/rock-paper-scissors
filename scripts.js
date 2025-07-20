@@ -17,17 +17,35 @@ let computerScore = 0;
 
 function playRound(humanChoice, computerChoice) {
     if (humanChoice === "Rock") {
-        if (computerChoice === "Scissors") console.log("YOU WIN!")
-        else if (computerChoice === "Paper") console.log("YOU LOSE!");
-        else console.log("TIE!");
+        if (computerChoice === "Scissors") {
+            console.log("YOU WIN!")
+            humanScore++;
+        } else if (computerChoice === "Paper") {
+            console.log("YOU LOSE!");
+            computerScore++;
+        } else {
+            console.log("TIE!");
+        }
     } else if (humanChoice === "Paper") {
-        if (computerChoice === "Scissors") console.log("YOU LOSE!");
-        else if (computerChoice === "Rock") console.log("YOU WIN!");
-        else console.log("TIE!");
+        if (computerChoice === "Scissors") {
+            console.log("YOU LOSE!")
+            computerScore++;
+        } else if (computerChoice === "Paper") {
+            console.log("TIE!");
+        } else {
+            console.log("YOU WIN!");
+            humanScore++;
+        }
     } else {
-        if (computerChoice === "Paper") console.log("YOU WIN!")
-        else if (computerChoice === "Rock") console.log("YOU LOSE!");
-        else console.log("TIE!")
+        if (computerChoice === "Scissors") {
+            console.log("TIE!")
+        } else if (computerChoice === "Paper") {
+            console.log("YOU WIN!");
+            humanScore++;
+        } else {
+            console.log("YOU LOSE!");
+            computerScore++;
+        }
     }
 }
 
