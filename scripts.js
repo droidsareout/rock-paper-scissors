@@ -15,7 +15,7 @@ function getHumanChoice() {
 function playGame() {
     let humanScore = 0;
     let computerScore = 0;
-    
+
     function playRound(humanChoice, computerChoice) {
         if (humanChoice === "Rock") {
             if (computerChoice === "Scissors") {
@@ -24,7 +24,7 @@ function playGame() {
             } else if (computerChoice === "Paper") {
                 console.log("YOU LOSE!");
                 computerScore++;
-            } else {
+            } else if (computerChoice === "Rock") {
                 console.log("TIE!");
             }
         } else if (humanChoice === "Paper") {
@@ -33,22 +33,29 @@ function playGame() {
                 computerScore++;
             } else if (computerChoice === "Paper") {
                 console.log("TIE!");
-            } else {
+            } else if (computerChoice === "Rock") {
                 console.log("YOU WIN!");
                 humanScore++;
             }
-        } else {
+        } else if (humanChoice === "Scissors") {
             if (computerChoice === "Scissors") {
                 console.log("TIE!")
             } else if (computerChoice === "Paper") {
                 console.log("YOU WIN!");
                 humanScore++;
-            } else {
+            } else if (computerChoice === "Rock") {
                 console.log("YOU LOSE!");
                 computerScore++;
             }
         }
     }
-}
 
-playRound(getHumanChoice(), getComputerChoice());
+    playRound(getHumanChoice(), getComputerChoice());
+    playRound(getHumanChoice(), getComputerChoice());
+    playRound(getHumanChoice(), getComputerChoice());
+    playRound(getHumanChoice(), getComputerChoice());
+    playRound(getHumanChoice(), getComputerChoice());
+};
+
+playGame();
+
